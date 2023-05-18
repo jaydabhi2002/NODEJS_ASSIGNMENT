@@ -1,0 +1,164 @@
+Q1 :- Difference‌ ‌between‌ ‌Java ‌and‌ ‌JavaScript?
+----------------------------------------------------------
+‌Java ----
+
+This is OOP or Object-Oriented programming language
+A stand-alone language
+Strongly typed language is used, and data type of variable is decided before declaring or using it
+Code has to be compiled
+Slightly more complex
+Used to perform complex tasks
+Large amount of memory is required
+Programs are saved with “.java” extension
+Stored in the / client host machine under the “Byte” code
+Compiled on the server before it is executed on the client side
+Is static and the code once written can be run on any computing platform
+
+‌JavaScript---
+
+This is an object based scripting language
+Not stand-alone, incorporated into HTML program for operation
+Language utilised is loosely typed, so that the user does not have to worry about the data type before the declaration
+The code is all text
+Easier in comparison
+Complex tasks cannot be executed
+Memory consumption is lesser
+Programs are saved with JavaScript, “.js” extension
+Stored in host or client machine as “source” code
+JavaScript is interpreted on the client side
+Dynamic and is a cross-platform language
+----------------------------------------------------------------------------------------------------------------------------
+
+Q2 :- What is JavaScript?
+
+JavaScript is the Programming Language for the Web.
+JavaScript can update and change both HTML and CSS.
+JavaScript can calculate, manipulate and validate data.
+-----------------------------------------------------------------------------------------------------------------------------------
+
+Q4 :- What are the data types supported by JavaScript?
+
+1. String
+2. Number
+3. Bigint
+4. Boolean
+5. Undefined
+6. Null
+7. Symbol
+8. Object
+
+The Object Datatype
+The object data type can contain:
+
+1. An object
+2. An array
+3. A date
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Q4 :- What are the scopes of a variable in JavaScript?
+
+JavaScript variables have different scopes, they are:
+
+Global Scope
+Local Scope 
+Block Scope
+----------------------------------------------------------------------------------------------------------------------------------
+Q5 :- What is Callback?
+A callback is a function passed as an argument to another function. This technique allows a function to call another function. A callback function can run after another function has finished.
+-----------------------------------------------------------------------------------------------------------------------------------
+
+Q6 :- What is Closure? Give an example?
+
+A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+
+In computer programming, a closure is a function that has access to variables in its lexical scope, even after the scope has closed or ended. The closure captures the values of the variables at the time the function is created, and those values are retained even if the variables are changed or destroyed afterward.
+
+Here is an example of closure in JavaScript:
+
+function outerFunction() {
+  let outerVariable = 10;
+  
+  function innerFunction() {
+    console.log(outerVariable);
+  }
+  
+  return innerFunction;
+}
+
+let innerFunc = outerFunction();
+innerFunc(); // Output: 10
+--------------------------------------------------------------------------------------------------------------------------------
+
+Q7 :- What is the difference between the operators ‘==‘ & ‘===‘? 
+
+The == operator compares the values of two operands after performing type conversion if necessary. This means that if the two operands are of different types, JavaScript will try to convert one or both of them to a common type before making the comparison. 
+For example:
+'5' == 5  // true
+null == undefined  // true
+
+On the other hand, the === operator, also known as the strict equality operator, compares the values of two operands without performing any type conversion. It checks not only the values, but also the types of the operands. 
+For example:
+'5' === 5  // false
+null === undefined  // false
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Q8 :- What is the difference between null & undefined?
+
+Null -->
+Null is used to represent an intentional absence of value. It represents a variable whose value is undefined. It accepts only one value, which is null. The Null keyword is used to define the Null type in TypeScript, but it is not useful because we can only assign a null value to it.
+
+//Variable declared and assigned to null  
+var a = null;   
+console.log( a );   //output: null  
+console.log( typeof(a) );   //output: object
+
+Undefined -->
+
+It represents uninitialized variables in TypeScript and JavaScript. It has only one value, which is undefined. The undefined keyword defines the undefined type in TypeScript, but it is not useful because we can only assign an undefined value to it.
+
+//Variable declaration without assigning any value to it  
+var a;        
+console.log(a);  //undefined  
+console.log(typeof(a));  //undefined  
+console.log(undeclaredVar);  //Uncaught ReferenceError: undeclaredVar is not defined  
+-------------------------------------------------------------------------------------------------------------------------------
+
+Q9 :- What would be the result of 2+5+”3″? 
+
+Because compiler firstly treat 2+5 as an integer or a addition symbol
+
+then "3" is treated as string and + is treated as concatination  symbol.
+
+That's  why the answer is 73.
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+Q10 :- What is the difference between Call & Apply?
+
+call() method takes arguments as comma-separated values, whereas apply() method takes arguments as an array.
+
+Here's an example of how you can use call():
+function sayHello(message) {
+  console.log(message + ' ' + this.name);
+}
+
+const person = {
+  name: 'John',
+};
+
+sayHello.call(person, 'Hello'); // outputs "Hello John"
+
+Here's an example of how you can use apply():
+function sayHello(message) {
+  console.log(message + ' ' + this.name);
+}
+
+const person = {
+  name: 'John',
+};
+
+sayHello.apply(person, ['Hello']); // outputs "Hello John"
+
+In this example, apply() is used to invoke the sayHello() function with person as the this value, and the array ['Hello'] as the argument.
+
+In general, you would use call() when you know the exact number of argumen
