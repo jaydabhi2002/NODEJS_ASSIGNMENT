@@ -6,9 +6,8 @@ const PORT = 3000;
 const geocode = require("../util/geocode");
 const weather = require("../util/weather");
 
-const viewPath = path.join(__dirname, "../templetes/views");
+const viewPath = path.join(__dirname, "../templet/views");
 const publicPath = path.join(__dirname, "../public");
-
 app.set("view engine", "hbs");
 app.set("views", viewPath);
 app.use(express.static(publicPath));

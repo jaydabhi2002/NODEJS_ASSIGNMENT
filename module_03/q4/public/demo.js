@@ -6,7 +6,6 @@ var requestOptions = {
     headers: headers,
     redirect: 'follow'
 };
-
 const getContries = () => {
     fetch("https://api.countrystatecity.in/v1/countries", requestOptions).then(response => {
         return response.json();
@@ -25,10 +24,10 @@ const getContries = () => {
 }
 
 var countryCode;
-const getStates = (ccode) => {
+const getStates = (cname) => {
 
-    countryCode = ccode;
-    fetch(`https://api.countrystatecity.in/v1/countries/${ccode}/states`, requestOptions).then(response => {
+    countryCode = cname;
+    fetch(`https://api.countrystatecity.in/v1/countries/${cname}/states`, requestOptions).then(response => {
         return response.json();
     }).then(result => {
 

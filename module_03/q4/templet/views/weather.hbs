@@ -13,8 +13,8 @@
     />
   </head>
   <body onload="getContries()">
-
-    <section class="vh-100" style="background-color: #cdc4f9;">
+  {{!-- {{>header}} --}}
+    <section class="vh-100" style="background-color: #217fb9;">
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-md-4">
@@ -27,7 +27,7 @@
                 class="form-control"
                 onchange="getStates(value)"
               >
-                <option value="">---Select Country---</option>
+                <option value="0">---Select Country---</option>
               </select>
             </div>
 
@@ -39,7 +39,7 @@
                 class="form-control"
                 onchange="getCities(value)"
               >
-                <option value="">---Select State---</option>
+                <option value="0">---Select State---</option>
               </select>
             </div>
 
@@ -51,7 +51,7 @@
                 class="form-control"
                 onchange="getWeather(value)"
               >
-                <option value="">---Select City---</option>
+                <option value="0">---Select City---</option>
               </select>
             </div>
 
@@ -98,6 +98,6 @@
         </div>
       </div>
     </section>
-    <script src="js/demo.js"></script>
+    <script src="demo.js"></script>
   </body>
 </html>
