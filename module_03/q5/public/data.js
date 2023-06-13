@@ -72,7 +72,7 @@ const timeanddate = (val) => {
   ccode = val;
   //   alert(ccode);
   fetch(
-    `https://timezone.abstractapi.com/v1/current_time/?api_key=1089efabd8e54844810c1883ba1b2b80&location=${ccode}`
+    `https://timezone.abstractapi.com/v1/current_time/?api_key=938461fd2ce9480eb538defb81920328&location=${ccode}`
   ).then((result) => {
     return result.json();
   }).then((data) => {
